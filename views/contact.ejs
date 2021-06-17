@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="/assets/assets.css">
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <%- include ('partials/nav') %>
+    <h1>THIS IS MY CONTACT PAGE</h1>
+    <p>Contact me right here!!</p>
+
+
+    <form id="contact-form" method="POST" action="/contact">
+      <label for="who">Who do you want to contact ?</label><br>
+      <input type="text" name="who" value="<%= qs.person %>"/><br><br>
+
+      <label for="department">Which department ?</label><br>
+      <input type="text" name="department" value="<%= qs.dept %>"/><br><br>
+
+      <label for="email">Your email</label><br>
+      <input type="text" name="email"/><br><br>
+
+      <input type="submit" value="submit"/>
+
+    </form>
+  </body>
+</html>
